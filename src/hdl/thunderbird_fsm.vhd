@@ -120,8 +120,7 @@ begin
 	register_proc : process (i_clk, i_reset)
     begin
         if i_reset = '1' then
-            o_lights_L <= "000";
-            o_lights_R <= "000";
+            f_Q <= "000";            
         elsif (rising_edge(i_clk)) then
             f_Q <= f_Q_next;
         end if;
